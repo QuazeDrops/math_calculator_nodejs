@@ -6,4 +6,6 @@ npm install express
 
 -running backend: 
 node App.js
+
+-backend runs on port 4000:
 http://localhost:4000
