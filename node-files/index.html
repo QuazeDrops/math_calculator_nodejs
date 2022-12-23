@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Math App</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  </head>
+<body>
+
+      <div class="wrapper">
+
+        
+        <div class="container-fluid">
+          <div class="container-fluid">
+            <div class="page-title-box">
+              <div class="row align-items-center">
+                <div class="col-sm-12">
+                                      <ol class="breadcrumb">
+                          <li class="breadcrumb-item active" style="font-size:16px">Numbers & Symbols</li>
+                    </ol>
+                </div>
+              </div>
+            </div>
+          
+
+
+          <div class="row">
+
+
+
+
+            <!-- Cube roots -->
+            <dkv class="col-xl-3 col-md-6">
+              <dic class="card mini-stat text-white">
+                <div class="card-body">
+                  <div class="mb-4">
+                    <h5 class="font-16 float-left text-uppercase mt-0 text-white-50">Cube root</h5>
+                  </div>
+                  <div class="col-lg-12">
+                    <div class="form-group">
+                        <div class="form-material floating">
+                            <label for="time" class="text-white-50" style="margin-bottom:3px">Value</label>
+                              <form id="cuberoot_form">
+                                <input type="text" class="form-control" id="cuberoot_number" name="cuberoot" placeholder="30"/>
+                                <br>
+                              </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                      <button class="btn btn-primary btn-block waves-effect" id="button" name="cuberoot" style="width:100%">CALCULATE</button>
+                    </div>
+                    <div class="pt-2">
+                      <h4 class="font-500" style="text-align: center" id="cuberoot_answer"></h4>
+                    </div>
+                  
+                </div>
+                </div>
+              </dic>
+            </dkv>
+
+
+
+
+
+
+
+            <!-- Radicals -->
+
+            <dkv class="col-xl-3 col-md-6">
+              <dic class="card mini-stat text-white">
+                <div class="card-body">
+                  <div class="mb-4">
+                    <h5 class="font-16 float-left text-uppercase mt-0 text-white-50">Radicals</h5>
+                  </div>
+                  <div class="col-lg-12">
+                    <div class="form-group">
+                        <div class="form-material floating">
+                            <label for="time" class="text-white-50" style="margin-bottom:3px">Value</label>
+                              <form id="radicals_form">
+
+                                <input type="text" class="form-control" id="radicals_number" name="radicals" placeholder="30"/>
+                                <br>
+                              </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                      <button class="btn btn-primary btn-block waves-effect" id="button" name="radicals" style="width:100%">CALCULATE</button>
+                    </div>
+                    <div class="pt-2">
+                      <h4 class="font-500" style="text-align: center" id="radicals_answer"></h4>
+                    </div>
+                  
+                </div>
+                </div>
+
+              </dic>
+            </dkv>
+
+
+
+
+            <dkv class="col-xl-3 col-md-6">
+              <dic class="card mini-stat text-white">
+                <div class="card-body">
+                  <div class="mb-4">
+                    <h5 class="font-16 float-left text-uppercase mt-0 text-white-50">Exponents</h5>
+                  </div>
+                  <div class="col-lg-12">
+                    <div class="form-group">
+                        <div class="form-material floating">
+                            <label for="time" class="text-white-50" style="margin-bottom:3px">Value</label>
+                              <form id="exponents_form">
+
+                                <input type="text" class="form-control" id="exponents_number" name="exponents" placeholder="Base"/>
+                                <br>
+
+                                <input type="text" class="form-control" id="exponents_number" name="exponents" placeholder="Exponent"/>
+                                <br>
+                              </form>
+                        </div>
+                        
+                    </div>
+                    <div class="col-lg-12">
+                      <button class="btn btn-primary btn-block waves-effect" id="button" name="exponents" style="width:100%">CALCULATE</button>
+                    </div>
+                    <div class="pt-2">
+                      <h4 class="font-500" style="text-align: center" id="exponents_answer"></h4>
+                    </div>
+                  
+                </div>
+                </div>
+
+              </dic>
+            </dkv>
+
+
+
+            <dkv class="col-xl-3 col-md-6">
+              <dic class="card mini-stat text-white">
+                <div class="card-body">
+                  <div class="mb-4">
+                    <h5 class="font-16 float-left text-uppercase mt-0 text-white-50">Radicals</h5>
+                  </div>
+                  <div class="col-lg-12">
+                    <div class="form-group">
+                        <div class="form-material floating">
+                            <label for="time" class="text-white-50" style="margin-bottom:3px">Value</label>
+                              <form id="radicals_form">
+
+                                <input type="text" class="form-control" id="radicals_number" name="radicals" placeholder="30"/>
+                                <br>
+                              </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                      <button class="btn btn-primary btn-block waves-effect" id="button" name="radicals" style="width:100%">CALCULATE</button>
+                    </div>
+                    <div class="pt-2">
+                      <h4 class="font-500" style="text-align: center" id="radicals_answer"></h4>
+                    </div>
+                  
+                </div>
+                </div>
+
+              </dic>
+            </dkv>
+
+            <div class="container-fluid">
+              <div class="page-title-box">
+                <div class="row align-items-center">
+                  <div class="col-sm-12">
+                                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item active" style="font-size:16px">Sequences & Progression</li>
+                      </ol>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+
+            <dkv class="col-xl-3 col-md-6">
+              <dic class="card mini-stat text-white">
+                <div class="card-body">
+                  <div class="mb-4">
+                    <h5 class="font-16 float-left text-uppercase mt-0 text-white-50">Arithmetic Sequences</h5>
+                  </div>
+                  <div class="col-lg-12">
+                    <div class="form-group">
+                        <div class="form-material floating">
+                          <form id="arithseq_form">
+                            <label for="time" class="text-white-50" style="margin-bottom:3px">Values</label>
+
+                            <input type="text" class="form-control" id="arithseq_number1" name="arithseq" placeholder="a" required="true"/>
+                            <br>
+
+                            <input type="text" class="form-control" id="arithseq_number2" name="arithseq" placeholder="b" required/>
+                            <br>
+
+                            <input type="text" class="form-control" id="arithseq_number3" name="arithseq" placeholder="c" required/>
+                            <br>
+                          </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                      <button class="btn btn-primary btn-block waves-effect" id="button" name="arithseq" style="width:100%">CALCULATE</button>
+                    </div>
+                    <div class="pt-2">
+                      <h4 class="font-500" style="text-align: center" id="arithseq_answer"></h4>
+                    </div>
+                  
+                </div>
+                </div>
+
+              </dic>
+            </dkv>
+
+
+
+
+
+            <dkv class="col-xl-3 col-md-6">
+              <dic class="card mini-stat text-white">
+                <div class="card-body">
+                  <div class="mb-4">
+                    <h5 class="font-16 float-left text-uppercase mt-0 text-white-50">Geometric Sequences</h5>
+                  </div>
+                  <div class="col-lg-12">
+                    <div class="form-group">
+                        <div class="form-material floating">
+                          <form id="geoseq_form">
+                            <label for="time" class="text-white-50" style="margin-bottom:3px">Values</label>
+
+                            <input type="text" class="form-control" id="geoseq_number1" name="geoseq" placeholder="a" required="true"/>
+                            <br>
+
+                            <input type="text" class="form-control" id="geoseq_number2" name="geoseq" placeholder="b" required/>
+                            <br>
+
+                            <input type="text" class="form-control" id="geoseq_number3" name="geoseq" placeholder="c" required/>
+                            <br>
+                          </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                      <button class="btn btn-primary btn-block waves-effect" id="button" name="geoseq" style="width:100%">CALCULATE</button>
+                    </div>
+                    <div class="pt-2">
+                      <h4 class="font-500" style="text-align: center" id="geoseq_answer"></h4>
+                    </div>
+                  
+                </div>
+                </div>
+
+              </dic>
+            </dkv>
+
+
+
+
+
+
+            <dkv class="col-xl-3 col-md-6">
+              <dic class="card mini-stat text-white">
+                <div class="card-body">
+                  <div class="mb-4">
+                    <h5 class="font-16 float-left text-uppercase mt-0 text-white-50">Arithmetic Progression</h5>
+                  </div>
+                  <div class="col-lg-12">
+                    <div class="form-group">
+                        <div class="form-material floating">
+                          <form id="sumofap_form">
+                            <label for="time" class="text-white-50" style="margin-bottom:3px">Values</label>
+
+                            <input type="text" class="form-control" id="sumofap_number1" name="sumofap" placeholder="a" required="true"/>
+                            <br>
+
+                            <input type="text" class="form-control" id="sumofap_number2" name="sumofap" placeholder="b" required/>
+                            <br>
+
+                            <input type="text" class="form-control" id="sumofap_number3" name="sumofap" placeholder="c" required/>
+                            <br>
+                          </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                      <button class="btn btn-primary btn-block waves-effect" id="button" name="sumofap" style="width:100%">CALCULATE</button>
+                    </div>
+                    <div class="pt-2">
+                      <h4 class="font-500" style="text-align: center" id="sumofap_answer"></h4>
+                    </div>
+                  
+                </div>
+                </div>
+
+              </dic>
+            </dkv>
+
+
+
+
+
+            
+
+
+
+            <dkv class="col-xl-3 col-md-6">
+              <dic class="card mini-stat text-white">
+                <div class="card-body">
+                  <div class="mb-4">
+                    <h5 class="font-16 float-left text-uppercase mt-0 text-white-50">Geometric Progression</h5>
+                  </div>
+                  <div class="col-lg-12">
+                    <div class="form-group">
+                        <div class="form-material floating">
+                          <form id="sumofgp_form">
+                            <label for="time" class="text-white-50" style="margin-bottom:3px">Values</label>
+
+                            <input type="text" class="form-control" id="sumofgp_number1" name="sumofgp" placeholder="a"/>
+                            <br>
+
+                            <input type="text" class="form-control" id="sumofgp_number2" name="sumofgp" placeholder="b"/>
+                            <br>
+
+                            <input type="text" class="form-control" id="sumofgp_number3" name="sumofgp" placeholder="c"/>
+                            <br>
+                          </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                      <button class="btn btn-primary btn-block waves-effect" id="button" name="sumofgp" style="width:100%">CALCULATE</button>
+                    </div>
+                    <div class="pt-2">
+                      <h4 class="font-500" style="text-align: center" id="sumofgp_answer"></h4>
+                    </div>
+                  
+                </div>
+                </div>
+
+              </dic>
+            </dkv>
+
+
+
+
+
+
+              <div class="container-fluid">
+                <div class="page-title-box">
+                  <div class="row align-items-center">
+                    <div class="col-sm-12">
+                                          <ol class="breadcrumb">
+                              <li class="breadcrumb-item active" style="font-size:16px">Equations</li>
+                        </ol>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+
+            <dkv class="col-xl-3 col-md-6">
+              <dic class="card mini-stat text-white">
+                <div class="card-body">
+                  <div class="mb-4">
+                    <h5 class="font-16 float-left text-uppercase mt-0 text-white-50">Quadratic equations</h5>
+                  </div>
+                  <div class="col-lg-12">
+                    <div class="form-group">
+                        <div class="form-material floating">
+                          <form id="quadratic_form">
+                            <label for="time" class="text-white-50" style="margin-bottom:3px">Values</label>
+
+                            <input type="text" class="form-control" id="quadratic_number1" name="quadratic" placeholder="a"/>
+                            <br>
+
+                            <input type="text" class="form-control" id="quadratic_number2" name="quadratic" placeholder="b"/>
+                            <br>
+
+                            <input type="text" class="form-control" id="quadratic_number3" name="quadratic" placeholder="c"/>
+                            <br>
+                          </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                      <button class="btn btn-primary btn-block waves-effect" id="button" name="quadratic" style="width:100%">CALCULATE</button>
+                    </div>
+                    <div class="pt-2">
+                      <h4 class="font-500" style="text-align: center" id="quadratic_answer"></h4>
+                    </div>
+                  
+                </div>
+                </div>
+
+              </dic>
+            </dkv>
+
+
+
+
+
+
+
+
+           
+
+
+
+
+
+
+
+
+
+
+
+
+           
+
+
+
+
+
+
+
+          </div>
+
+      </div>
+
+  </body>
+
+  <footer class="footer" style="background: transparent;">
+    <div class="container-fluid">
+        <div class="row" style="background: transparent;">
+            <div class="col-12" style="background: transparent;">
+                This website is a schoolproject
+            </div>
+        </div>
+    </div>
+  </footer>
+
+  <script>
+    
+    function error(message) {
+      Toastify({
+                    text: message,
+                    duration: 5000,
+                    close: true,
+                    gravity: "top",
+                    position: "right",
+                    stopOnFocus: true,
+                    style: {
+                      background: "linear-gradient(to right, red, #eb4034)",
+                    },
+                  }).showToast();
+    }
+
+
+    function cubeRoot(a)
+    {
+      try{
+        const sol = Math.cbrt(a)
+        document.getElementById(`cuberoot_answer`).innerHTML = sol;
+      } catch (e) {
+        error(e.message)
+      }
+    }
+
+    function radicals(a)
+    {
+      try{
+        var sum = 1;
+        for (let i=1; i<a;a--)
+        {
+          sum *= a * i;
+        }
+        document.getElementById(`radicals_answer`).innerHTML = sum;
+      } catch (e) {
+        error(e.message)
+      }
+    }
+
+    function exponents(args)
+    {
+      try{
+        if (args.length != 2){
+          error("Expected 2 arguments for exponents")
+        }
+        const a = args[0];
+        const b = args[1];
+        var sol = 0;
+        sol = a**b
+        document.getElementById(`exponents_answer`).innerHTML = sol
+      } catch (e) {
+        error(e.message)
+      }
+    }
+
+    function ArithSeq(args) // arithmetic sequences
+    {
+      try{
+        if(args.length != 3){
+          error("Arithmetic sequence requires 3 arguments.")
+        }
+        const a = args[0]
+        const d = args[1]
+        const n = args[2]
+        let sol = 0;
+        for (let i=0; i<n;i++){
+            sol = a + (n - 1) * d;
+        }
+        document.getElementById("arithseq_answer").innerHTML = sol;
+      } catch (e) {
+        error(e.message)
+      }
+    }
+
+    function sumOfGP(args)
+    {
+      try{
+        if(args.length!= 3){
+          error("Geometric progression requires 3 arguments.")
+        }
+        const a = args[0];
+        const d = args[1];
+        const n = args[2];
+        let sum = 0;
+        for (let i=0;i<n;i++)
+        {
+            sum = a*d**n-1
+        }
+        document.getElementById(`sumofgp_answer`).innerHTML = sum;
+      } catch (e) {
+        error(e.message)
+      }
+    }
+
+    function GeoSeq(args)
+    {
+      try{
+        if(args.length != 3){
+          error('Geometric sequence requires 3 arguments.')
+        }
+        const a = args[0];
+        const d = args[1];
+        const n = args[2];
+        let sol = 0;
+        for (let i=0;i<n;i++)
+        {
+            sol = a * d ** n -1
+        }
+        document.getElementById(`geoseq_answer`).innerHTML = sol;
+      } catch (e) {
+        error(e.message)
+      }
+    }
+
+    function quadraticSolve(args)
+    {
+      try{
+        if(args.length!= 3){
+          error("Intersection sequence requires 3 arguments.")
+        }
+        const a = args[0];
+        const b = args[1];
+        const c = args[2];
+        console.log('[',a,']');
+        let cComponent = 2 * c
+        let bComponent = -b
+        let rootComponent = Math.sqrt(Math.pow(b, 2) - (4 * a * c))
+        let x1 = cComponent / (bComponent - rootComponent)
+        let x2 = cComponent / (bComponent + rootComponent)
+        console.log(x1)
+        console.log(x2)
+        var x = {x1, x2}
+        document.getElementById('quadratic_answer').innerHTML = 'x1 : ' + x1 + '<br>x2 : ' + x2
+      } catch (e) {
+        error(e.message)
+      }
+    }
+
+    $('button').on('click', function(){
+
+      var id = $(this).attr('name');
+      console.log(id)
+      var id2 = `${id}_number`
+      console.log(document.forms[`cuberoot_form`].elements)
+      var elements = document.forms[`${id}_form`].elements;
+
+      let data_values = []
+      if (elements.length > 1) {
+          for (var x = 0; x < elements.length; x++){
+          console.log('element: ', elements[x].value)
+          if (elements[x].value.length > 0 && elements[x].value != null){
+            data_values.push(elements[x].value)
+          }
+        }
+      } else {
+        data_values.push(elements[0].value)
+      }
+
+      if (id.toLowerCase() == 'cuberoot'){
+        cubeRoot(data_values)
+      } else if (id.toLowerCase() == 'radicals'){
+        console.log('solving for radicals')
+        radicals(data_values)
+      } else if (id.toLowerCase() == 'exponents'){
+        exponents(data_values)
+      } else if (id.toLowerCase() == 'arithseq'){
+        console.log('solving for arithseq')
+        ArithSeq(data_values)
+      } else if (id.toLowerCase() == 'sumofgp'){
+        sumOfGP(data_values)
+      } else if (id.toLowerCase() == 'geoseq'){
+        GeoSeq(data_values)
+      } else if (id.toLowerCase() == 'quadratic'){
+        quadraticSolve(data_values)
+      }
+      console.log('new id -> ', data_values)
+
+      
+  })
+    </script>
+</html>
